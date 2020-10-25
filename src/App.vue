@@ -1,28 +1,54 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-  </div>
+  <v-app>
+    <v-main>
+      <v-container>
+        <v-row>
+          <v-col>
+            <v-btn
+              @click="closeDialog()"
+              color="secondary"
+              small
+              absolute
+              top
+              right
+              fab
+            >
+              <span class="material-icons">
+                tune
+              </span>
+            </v-btn>
+            <Pomodoro :dialog="dialog" :closeDialog="closeDialog" />
+          </v-col>
+        </v-row>
+      </v-container>
+    </v-main>
+  </v-app>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import Pomodoro from "./components/Pomodoro";
 
 export default {
-  name: 'App',
+  name: "App",
+
   components: {
-    HelloWorld
-  }
-}
+    Pomodoro,
+  },
+
+  data: () => {
+    return {
+      dialog: false,
+    };
+  },
+  methods: {
+    closeDialog() {
+      this.dialog = !this.dialog;
+    },
+  },
+};
 </script>
 
-<style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+<style lang="sass" scoped>
+.v-main
+  margin: 25px auto
 </style>
