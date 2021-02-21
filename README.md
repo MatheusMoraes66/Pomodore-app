@@ -1,24 +1,18 @@
-# pomodoro-app
+# Pomodoro-app
 
-## Project setup
-```
-npm install
-```
+> Status do Projeto: Em desenvolvimento :warning:
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+![Badge](https://img.shields.io/static/v1?label=VUE&message=FRAMEWORK&color=grenn&style=for-the-badge)
 
-### Compiles and minifies for production
-```
-npm run build
-```
+### Layout
 
-### Lints and fixes files
-```
-npm run lint
-```
+![alt text](./src/assets/play.png)
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+### Funcionalidades
+
+- [x] Start counting
+- [x] Stop counting
+- [x] Reset counting
+- [x] Add Short and Long break
+- [ ] Config Timers
+- [ ] Dark mode
